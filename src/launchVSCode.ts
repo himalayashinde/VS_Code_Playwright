@@ -1,30 +1,32 @@
-import * as path from "path";
-import { runTests } from "@vscode/test-electron";
+import { downloadAndUnzipVSCode } from '@vscode/test-electron';
+import * as cp from 'child_process';
+import * as path from 'path';
 
 async function main() {
-  try {
-    const extensionDevelopmentPath = path.resolve(__dirname, "../extension");
-    const extensionTestsPath = path.resolve(__dirname, "../tests/runTest.js");
 
-    const userDataDir = path.resolve(__dirname, "../test-user-data");
-    const extensionsDir = path.resolve(__dirname, "../test-extensions");
+  const vscodePath = await downloadAndUnzipVSCode('stable');
 
-    await runTests({
-      extensionDevelopmentPath,
-      extensionTestsPath,
-      launchArgs: [
-        "--disable-extensions=false",
-        `--user-data-dir=${userDataDir}`,
-        `--extensions-dir=${extensionsDir}`
-      ]
-    });
+  // Windows executable path
+  const codeExe = vscodePath;
 
-    console.log("VS Code launched. Close manually when finished.");
-    await new Promise(() => {});
-  } catch (err) {
-    console.error("Failed to run tests", err);
-    process.exit(1);
-  }
+  const userDataDir = path.resolve(__dirname, '../test-user-data');
+  const extensionsDir = path.resolve(__dirname, '../test-extensions');
+
+  console.log("Launching regular VS Code...");
+  console.log("Executable:", codeExe);
+
+  cp.spawn(
+    `"${codeExe}"`,
+    [
+      '--user-data-dir', userDataDir,
+      '--extensions-dir', extensionsDir
+    ],
+    {
+      detached: true,
+      shell: true,      // 👈 important on Windows
+      stdio: 'ignore'
+    }
+  ).unref();
 }
 
 main();
