@@ -1,0 +1,5 @@
+node_modules
+test-extensions
+test-user-data
+.vscode-test
+.github

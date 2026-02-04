@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@vscode/test-electron": "^2.5.2"
+  },
+  "scripts": {
+  "vscode-test": "npx ts-node src/launchVSCode.ts"
+},
+  "devDependencies": {
+    "@types/node": "^25.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
