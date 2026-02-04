@@ -1,0 +1,12 @@
+2026-02-04 19:12:00.781 [info] Extension host with pid 7088 started
+2026-02-04 19:12:00.782 [info] Skipping acquiring lock for i:\Coding_journey\VS_Code_Playwright\.tmp\user-data\User\workspaceStorage\71b0ec1e5cd48c40140f921c77a89cec.
+2026-02-04 19:12:02.396 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-02-04 19:12:02.749 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-02-04 19:12:03.621 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2026-02-04 19:12:03.869 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-02-04 19:12:04.402 [info] Eager extensions activated
+2026-02-04 19:12:04.407 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-02-04 19:12:04.507 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-02-04 19:12:07.565 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2026-02-04 19:12:16.172 [info] Extension host terminating: renderer closed the MessagePort
+2026-02-04 19:12:16.215 [info] Extension host with pid 7088 exiting with code 0

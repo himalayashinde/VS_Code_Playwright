@@ -1,0 +1,6 @@
+2026-02-04 19:39:14.385 [error] Error: Error mutex already exists
+    at qu.S (file:///I:/Coding_journey/VS_Code_Playwright/.vscode-test/vscode-win32-x64-archive-1.108.2/resources/app/out/main.js:142:18405)
+2026-02-04 19:39:14.427 [info] update#setState idle
+2026-02-04 19:39:44.391 [info] update#setState checking for updates
+2026-02-04 19:39:44.639 [info] update#setState idle
+2026-02-04 19:40:13.123 [info] Extension host with pid 6636 exited with code: 0, signal: unknown.

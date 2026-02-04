@@ -1,0 +1,4 @@
+2026-02-04 19:22:22.595 [warning] Creation of workbench contribution 'workbench.contrib.configurationDefaultOverridesContribution' took 27ms.
+2026-02-04 19:22:30.549 [info] Started local extension host with pid 6304.
+2026-02-04 19:22:33.890 [warning] [lifecycle] onWillShutdown is taking a long time, pending operations: join.chatSessionStore, join.chatEditingSession
+2026-02-04 19:22:34.080 [info] Started local extension host with pid 12640.

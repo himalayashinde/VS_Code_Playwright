@@ -1,6 +1,13 @@
 import { test, expect } from "@playwright/test";
 
 test("VS Code launched", async ({ page }) => {
-  await page.waitForTimeout(5000);
-  await expect(page).toHaveTitle(/Visual Studio Code/);
+
+  // wait longer for slow startup
+  await page.waitForTimeout(20000);
+
+  // wait for Explorer icon
+  const explorer = page.getByLabel("Explorer (Ctrl+Shift+E)");
+
+  await expect(explorer).toBeVisible({ timeout: 60000 });
+
 });
